@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <script src="script.js" defer></script>
+
+    <title>Frontend Mentor | Interactive rating component</title>
+  </head>
+  <body>
+    <main class="main grid container">
+      <!-- Rating State Start -->
+      <section
+        class="card rating-card card__bg--grey"
+        aria-labelledby="rating-card__title"
+      >
+        <img src="images/icon-star.svg" alt="" class="star-icon" />
+
+        <h1 id="rating-card__title" class="rating-card__title">
+          How did we do?
+        </h1>
+
+        <p class="rating-card__description">
+          Please let us know how we did with your support request. All feedback
+          is appreciated to help us improve our offering!
+        </p>
+
+        <form
+          id="rating-form"
+          class="rating-card__form"
+          aria-label="Rate our support from 1 to 5"
+        >
+          <!-- Visually hidden error message area -->
+          <div
+            id="rating-error"
+            class="visually-hidden"
+            aria-live="assertive"
+            role="alert"
+          >
+            <!-- error text goes here via JavaScript -->
+          </div>
+
+          <fieldset class="rating-card__fieldset">
+            <legend class="visually-hidden">Rating from 1 to 5</legend>
+
+            <div class="rating-card__options flex">
+              <label class="rating-card__option flex" for="rate-1">
+                <input
+                  type="radio"
+                  name="rating"
+                  value="1"
+                  aria-label="1 out of 5"
+                  id="rate-1"
+                  class="rating-card__input visually-hidden"
+                />
+                <span class="rating-card__value">1</span>
+              </label>
+
+              <label class="rating-card__option flex" for="rate-2">
+                <input
+                  type="radio"
+                  name="rating"
+                  value="2"
+                  aria-label="2 out of 5"
+                  id="rate-2"
+                  class="rating-card__input visually-hidden"
+                />
+                <span class="rating-card__value">2</span>
+              </label>
+
+              <label class="rating-card__option flex" for="rate-3">
+                <input
+                  type="radio"
+                  name="rating"
+                  value="3"
+                  aria-label="3 out of 5"
+                  id="rate-3"
+                  class="rating-card__input visually-hidden"
+                />
+                <span class="rating-card__value">3</span>
+              </label>
+
+              <label class="rating-card__option flex" for="rate-4">
+                <input
+                  type="radio"
+                  name="rating"
+                  value="4"
+                  aria-label="4 out of 5"
+                  id="rate-4"
+                  class="rating-card__input visually-hidden"
+                />
+                <span class="rating-card__value">4</span>
+              </label>
+
+              <label class="rating-card__option flex" for="rate-5">
+                <input
+                  type="radio"
+                  name="rating"
+                  value="5"
+                  aria-label="5 out of 5"
+                  id="rate-5"
+                  class="rating-card__input visually-hidden"
+                />
+                <span class="rating-card__value">5</span>
+              </label>
+            </div>
+          </fieldset>
+
+          <button type="submit" class="rating-card__submit">Submit</button>
+        </form>
+      </section>
+      <!-- Rating State End -->
+
+      <!-- Thank You State Start -->
+      <section
+        class="card thank-card card__bg--grey"
+        aria-labelledby="thank-card__title"
+      >
+        <img src="images/illustration-thank-you.svg" alt="" />
+        <p class="thank-card__rating">
+          You selected
+          <span id="selected-rating" class="thank-card__rating-value"></span>
+          out of 5
+        </p>
+        <h1 id="thank-card__title" class="thank-card__title">Thank you!</h1>
+        <p class="thank-card__message">
+          We appreciate you taking the time to give a rating. If you ever need
+          more support, don’t hesitate to get in touch!
+        </p>
+      </section>
+    </main>
+    <!-- Thank You State End -->
+  </body>
+</html>
